@@ -3,221 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং | ডিজিটাল পোর্টাল</title>
+    <title>ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং | অফিসিয়াল পোর্টাল</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Hind Siliguri', sans-serif; scroll-behavior: smooth; }
         .gradient-bg { background: linear-gradient(135deg, #004a87 0%, #0072bc 100%); }
+        .service-card:hover { transform: translateY(-10px); transition: all 0.3s ease; }
         .page-section { display: none; }
-        .active-section { display: block; }
+        .active-section { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <div class="bg-blue-900 text-white py-2 text-sm hidden md:block">
         <div class="container mx-auto px-6 flex justify-between">
-            <span>📞 হেল্পライン: ১৬২২১ (২৪/৭ সাপোর্ট)</span>
-            <span>📍 সারা বাংলাদেশে ৮০০+ আউটলেট</span>
+            <span>📞 হেল্পলাইন: ১৬২২১ (২৪/৭ কাস্টমার সার্ভিস)</span>
+            <span>📍 সারা বাংলাদেশে ৮০০+ এজেন্ট পয়েন্ট</span>
         </div>
     </div>
 
-    <nav class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2 cursor-pointer" onclick="showSection('home')">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="showSection('home-page')">
                 <div class="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">B</div>
                 <span class="text-xl font-bold text-blue-800">BRAC BANK <span class="text-sky-500">AGENT</span></span>
             </div>
             <div class="hidden lg:flex space-x-8 font-semibold text-gray-600">
-                <button onclick="showSection('home')" class="hover:text-blue-600">হোম</button>
-                <button onclick="showSection('agent-list')" class="hover:text-blue-600">এজেন্ট লিস্ট</button>
-                <button onclick="showSection('account-guide')" class="hover:text-blue-600">অ্যাকাউন্ট খোলার নিয়ম</button>
-                <button onclick="showSection('contact')" class="hover:text-blue-600">যোগাযোগ</button>
+                <button onclick="showSection('home-page')" class="hover:text-blue-600 transition">হোম</button>
+                <button onclick="showSection('agent-list-page')" class="hover:text-blue-600 transition">এজেন্ট লিস্ট</button>
+                <button onclick="showSection('account-guide-page')" class="hover:text-blue-600 transition">অ্যাকাউন্ট খোলার নিয়ম</button>
+                <button onclick="showSection('contact-page')" class="hover:text-blue-600 transition">যোগাযোগ</button>
             </div>
-            <button onclick="showSection('agent-list')" class="bg-orange-500 text-white px-6 py-2 rounded-md font-bold hover:bg-orange-600 transition shadow-md">এজেন্ট খুঁজুন</button>
+            <button onclick="showSection('agent-list-page')" class="bg-orange-500 text-white px-6 py-2 rounded-md font-bold hover:bg-orange-600 shadow-md">এজেন্ট খুঁজুন</button>
         </div>
     </nav>
 
     <main>
-        
-        <div id="home" class="page-section active-section">
-            <section class="gradient-bg text-white py-20 px-6">
+        <div id="home-page" class="page-section active-section">
+            <section class="gradient-bg text-white py-20 px-6 overflow-hidden">
                 <div class="container mx-auto flex flex-col lg:flex-row items-center">
-                    <div class="lg:w-3/5 space-y-6">
-                        <h1 class="text-5xl lg:text-6xl font-bold leading-tight">আপনার স্মার্ট ব্যাংকিং <br>সঙ্গী এখন পাড়াতেই।</h1>
-                        <p class="text-xl text-blue-100">আধুনিক প্রযুক্তি ও সর্বোচ্চ নিরাপত্তায় ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং এখন আরও সহজ।</p>
-                        <div class="flex gap-4">
-                            <button onclick="showSection('agent-list')" class="bg-white text-blue-800 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 shadow-xl">এজেন্ট খুঁজুন</button>
-                            <button onclick="showSection('account-guide')" class="border border-white/40 px-8 py-3 rounded-xl font-bold hover:bg-white/10">নিয়মাবলী দেখুন</button>
+                    <div class="lg:w-3/5 space-y-8">
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">আপনার গ্রামেই এখন <br><span class="text-sky-300">স্মার্ট ব্যাংকিং।</span></h1>
+                        <p class="text-xl text-blue-100 max-w-2xl">ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং নিয়ে এসেছে আধুনিক প্রযুক্তি ও সর্বোচ্চ নিরাপত্তা। কোনো লুকানো চার্জ ছাড়াই নিরাপদ ও দ্রুত লেনদেন।</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="showSection('agent-list-page')" class="bg-white text-blue-800 px-10 py-4 rounded-xl font-bold text-lg shadow-2xl hover:bg-gray-100 transition">এজেন্ট খুঁজুন</button>
+                            <button onclick="showSection('account-guide-page')" class="border-2 border-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">কিভাবে অ্যাকাউন্ট খুলবেন?</button>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section class="container mx-auto py-16 px-6 text-center">
-                <h2 class="text-3xl font-bold mb-10">আমাদের বিশেষত্ব</h2>
+
+            <section class="container mx-auto -mt-12 px-6 relative z-20">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-50">
+                        <h3 class="text-3xl font-bold text-blue-700">৮০০+</h3>
+                        <p class="text-gray-500">এজেন্ট আউটলেট</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-50">
+                        <h3 class="text-3xl font-bold text-blue-700">৫০লাখ+</h3>
+                        <p class="text-gray-500">সন্তুষ্ট গ্রাহক</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-50">
+                        <h3 class="text-3xl font-bold text-blue-700">০.০%</h3>
+                        <p class="text-gray-500">লুকানো চার্জ</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-50">
+                        <h3 class="text-3xl font-bold text-blue-700">২৪/৭</h3>
+                        <p class="text-gray-500">সিস্টেম মনিটরিং</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container mx-auto py-24 px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-4">আমাদের পূর্ণাঙ্গ ব্যাংকিং সেবাসমূহ</h2>
+                    <p class="text-gray-600">সব আধুনিক ব্যাংকিং সুবিধা এখন আপনার হাতের নাগালে।</p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-4xl mb-4">🔒</div>
-                        <h3 class="text-xl font-bold mb-2">সুরক্ষিত লেনদেন</h3>
-                        <p class="text-gray-500">বায়োমেট্রিক ও রিয়েল-টাইম SMS এলার্ট সুবিধা।</p>
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm service-card text-center">
+                        <div class="text-4xl mb-6">🏦</div>
+                        <h3 class="text-2xl font-bold mb-4">অ্যাকাউন্ট ওপেনিং</h3>
+                        <p class="text-gray-600">সেভিংস, কারেন্ট ও স্টুডেন্ট অ্যাকাউন্ট খোলার সুবিধা।</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h3 class="text-xl font-bold mb-2">দ্রুত সেবা</h3>
-                        <p class="text-gray-500">কোনো সিরিয়াল ছাড়াই তাৎক্ষণিক জমা ও উত্তোলন।</p>
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm service-card text-center">
+                        <div class="text-4xl mb-6">💸</div>
+                        <h3 class="text-2xl font-bold mb-4">লেনদেন ও সঞ্চয়</h3>
+                        <p class="text-gray-600">ডিপিএস, এফডিআর এবং রেমিট্যান্স সংগ্রহের সুবিধা।</p>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <div class="text-4xl mb-4">🌍</div>
-                        <h3 class="text-xl font-bold mb-2">রেমিট্যান্স</h3>
-                        <p class="text-gray-500">বিদেশের টাকা সংগ্রহ করুন সেকেন্ডেই।</p>
+                    <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm service-card text-center">
+                        <div class="text-4xl mb-6">📢</div>
+                        <h3 class="text-2xl font-bold mb-4">ঋণ সুবিধা</h3>
+                        <p class="text-gray-600">কৃষি, এসএমই এবং ব্যক্তিগত ঋণের সহজ সমাধান।</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 text-white py-20 px-6">
+                <div class="container mx-auto flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl font-bold mb-8">নিরাপত্তায় আমরা আধুনিক।</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-blue-400 font-bold">✓</div>
+                                <div><h4 class="text-xl font-bold">বায়োমেট্রিক অথেন্টিকেশন</h4><p class="text-gray-400">আপনার আঙুলের ছাপ ছাড়া কোনো লেনদেন সম্ভব নয়।</p></div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-blue-400 font-bold">✓</div>
+                                <div><h4 class="text-xl font-bold">ইনস্ট্যান্ট SMS অ্যালার্ট</h4><p class="text-gray-400">লেনদেন হওয়া মাত্রই মোবাইলে মেসেজ পাবেন।</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 bg-blue-600 p-10 rounded-3xl shadow-2xl text-center">
+                        <p class="text-2xl font-bold italic">"নিরাপদ ব্যাংকিং, নিশ্চিন্ত জীবন"</p>
                     </div>
                 </div>
             </section>
         </div>
 
-        <div id="agent-list" class="page-section py-16 px-6 bg-white">
+        <div id="agent-list-page" class="page-section py-20 px-6">
             <div class="container mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-4">আমাদের এজেন্ট তালিকা</h2>
-                <p class="text-center text-gray-500 mb-10">আপনার নিকটস্থ ব্র্যাক ব্যাংক এজেন্ট পয়েন্টটি খুঁজে নিন।</p>
-                
-                <div class="mb-8 max-w-md mx-auto">
-                    <input type="text" id="agentSearch" onkeyup="searchAgent()" placeholder="আপনার জেলা বা এলাকার নাম লিখুন..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-900">নিকটস্থ এজেন্ট খুঁজুন</h2>
+                <div class="mb-8 max-w-lg mx-auto">
+                    <input type="text" id="agentSearch" onkeyup="searchAgent()" placeholder="জেলা বা এলাকার নাম দিয়ে সার্চ করুন..." class="w-full px-6 py-4 rounded-2xl border-2 border-blue-100 focus:border-blue-500 outline-none shadow-sm">
                 </div>
-
-                <div class="overflow-x-auto shadow-2xl rounded-2xl border border-gray-100">
+                <div class="bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
                     <table class="w-full text-left" id="agentTable">
-                        <thead class="bg-blue-600 text-white">
+                        <thead class="bg-blue-700 text-white">
                             <tr>
-                                <th class="px-6 py-4">এজেন্টের নাম</th>
-                                <th class="px-6 py-4">এলাকা</th>
-                                <th class="px-6 py-4">জেলা</th>
-                                <th class="px-6 py-4">যোগাযোগ</th>
+                                <th class="px-8 py-5">এজেন্ট শপ</th>
+                                <th class="px-8 py-5">এলাকা</th>
+                                <th class="px-8 py-5">জেলা</th>
+                                <th class="px-8 py-5">ফোন নম্বর</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
-                            <tr class="hover:bg-blue-50">
-                                <td class="px-6 py-4 font-bold">রহিম এন্টারপ্রাইজ</td>
-                                <td class="px-6 py-4">মিরপুর ১০</td>
-                                <td class="px-6 py-4">ঢাকা</td>
-                                <td class="px-6 py-4">০১৭১১-XXXXXX</td>
-                            </tr>
-                            <tr class="hover:bg-blue-50">
-                                <td class="px-6 py-4 font-bold">করিম টেলিকম</td>
-                                <td class="px-6 py-4">চাষাড়া</td>
-                                <td class="px-6 py-4">নারায়ণগঞ্জ</td>
-                                <td class="px-6 py-4">০১৮২২-XXXXXX</td>
-                            </tr>
-                            <tr class="hover:bg-blue-50">
-                                <td class="px-6 py-4 font-bold">জননী ট্রেডার্স</td>
-                                <td class="px-6 py-4">আন্দরকিল্লা</td>
-                                <td class="px-6 py-4">চট্টগ্রাম</td>
-                                <td class="px-6 py-4">০১৯৩৩-XXXXXX</td>
-                            </tr>
-                            <tr class="hover:bg-blue-50">
-                                <td class="px-6 py-4 font-bold">সততা টেলিকম</td>
-                                <td class="px-6 py-4">শিবগঞ্জ</td>
-                                <td class="px-6 py-4">সিলেট</td>
-                                <td class="px-6 py-4">০১৭৪৪-XXXXXX</td>
-                            </tr>
+                            <tr class="hover:bg-blue-50 transition"><td class="px-8 py-4 font-bold">রহিম টেলিকম</td><td class="px-8 py-4">মিরপুর ১০</td><td class="px-8 py-4">ঢাকা</td><td class="px-8 py-4">০১৭০০-XXXXXX</td></tr>
+                            <tr class="hover:bg-blue-50 transition"><td class="px-8 py-4 font-bold">সততা এন্টারপ্রাইজ</td><td class="px-8 py-4">আন্দরকিল্লা</td><td class="px-8 py-4">চট্টগ্রাম</td><td class="px-8 py-4">০১৮০০-XXXXXX</td></tr>
+                            <tr class="hover:bg-blue-50 transition"><td class="px-8 py-4 font-bold">বিসমিল্লাহ ট্রেডার্স</td><td class="px-8 py-4">শিবগঞ্জ</td><td class="px-8 py-4">সিলেট</td><td class="px-8 py-4">০১৯০০-XXXXXX</td></tr>
+                            <tr class="hover:bg-blue-50 transition"><td class="px-8 py-4 font-bold">হক ভ্যারাইটিজ</td><td class="px-8 py-4">চাষাড়া</td><td class="px-8 py-4">নারায়ণগঞ্জ</td><td class="px-8 py-4">০১৬০০-XXXXXX</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-        <div id="account-guide" class="page-section py-20 px-6 bg-slate-50">
-            <div class="container mx-auto max-w-4xl bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
-                <h2 class="text-4xl font-bold text-blue-800 mb-8 border-b pb-4">অ্যাকাউন্ট খোলার বিস্তারিত নিয়মাবলী</h2>
-                
-                <div class="space-y-8">
-                    <div class="flex gap-6">
-                        <div class="text-3xl">📄</div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-800">প্রয়োজনীয় কাগজপত্র</h3>
-                            <ul class="list-disc ml-5 mt-3 text-gray-600 space-y-2">
-                                <li>আবেদনকারীর জাতীয় পরিচয়পত্র (NID)-এর মূল কপি ও ফটোকপি।</li>
-                                <li>২ কপি পাসপোর্ট সাইজের রঙিন ছবি।</li>
-                                <li>নমিনির ১ কপি ছবি এবং জাতীয় পরিচয়পত্রের ফটোকপি।</li>
-                                <li>বর্তমান ঠিকানার ইউটিলিটি বিলের কপি (প্রয়োজন সাপেক্ষে)।</li>
-                            </ul>
-                        </div>
+        <div id="account-guide-page" class="page-section py-20 px-6 bg-blue-50">
+            <div class="container mx-auto max-w-4xl bg-white p-12 rounded-[40px] shadow-2xl">
+                <h2 class="text-4xl font-bold text-blue-800 mb-8 border-b-4 border-blue-100 pb-4">অ্যাকাউন্ট খোলার গাইডলাইন</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-orange-600">প্রয়োজনীয় ডকুমেন্ট</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>📂 আবেদনকারীর মূল এনআইডি কার্ড</li>
+                            <li>📸 ২ কপি ল্যাব প্রিন্ট রঙিন ছবি</li>
+                            <li>👥 নমিনির ১ কপি ছবি ও আইডি কার্ড</li>
+                            <li>🏠 বর্তমান ঠিকানার প্রমাণপত্র</li>
+                        </ul>
                     </div>
-
-                    <div class="flex gap-6">
-                        <div class="text-3xl">⚙️</div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-800">ধাপসমূহ</h3>
-                            <ol class="list-decimal ml-5 mt-3 text-gray-600 space-y-4">
-                                <li><strong>আউটলেট ভিজিট:</strong> আপনার নিকটস্থ ব্র্যাক ব্যাংক এজেন্ট আউটলেটে যান।</li>
-                                <li><strong>ফর্ম পূরণ:</strong> এজেন্টের সহায়তায় ডিজিটাল ই-কেওয়াইসি (e-KYC) ফর্ম পূরণ করুন।</li>
-                                <li><strong>বায়োমেট্রিক:</strong> আপনার আঙুলের ছাপ (Fingerprint) প্রদান করে পরিচয় নিশ্চিত করুন।</li>
-                                <li><strong>সক্রিয়করণ:</strong> ভেরিফিকেশন শেষ হলে সাথে সাথেই আপনার অ্যাকাউন্ট নম্বর পেয়ে যাবেন।</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600">
-                        <p class="text-blue-800 font-semibold italic">বি:দ্র: এজেন্ট ব্যাংকিং অ্যাকাউন্ট খোলার জন্য কোনো প্রাথমিক জমা বা হিডেন চার্জ নেই!</p>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-green-600">সহজ ৪টি ধাপ</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li>১. নিকটস্থ এজেন্ট পয়েন্টে যান।</li>
+                            <li>২. ডিজিটাল ফর্মে তথ্য প্রদান করুন।</li>
+                            <li>৩. বায়োমেট্রিক ভেরিফিকেশন করুন।</li>
+                            <li>৪. সাথে সাথেই অ্যাকাউন্ট নম্বর নিন।</li>
+                        </ul>
                     </div>
                 </div>
-                <button onclick="showSection('home')" class="mt-10 text-blue-600 font-bold hover:underline">← হোম পেজে ফিরে যান</button>
-            </div>
-        </div>
-
-        <div id="contact" class="page-section py-20 px-6">
-            <div class="container mx-auto text-center max-w-2xl">
-                <h2 class="text-4xl font-bold mb-6">সরাসরি যোগাযোগ করুন</h2>
-                <p class="text-gray-600 mb-10">আমাদের সেবা সম্পর্কে যেকোনো প্রশ্ন থাকলে নিচের মাধ্যমগুলোতে যোগাযোগ করতে পারেন।</p>
-                
-                <div class="flex flex-col items-center space-y-6">
-                    <div class="flex space-x-6">
-                        <a href="https://facebook.com/yourfriendsid" target="_blank" class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl hover:scale-110 transition shadow-lg">f</a>
-                        <a href="https://linkedin.com/in/yourfriendsid" target="_blank" class="w-14 h-14 bg-blue-800 text-white rounded-full flex items-center justify-center text-2xl hover:scale-110 transition shadow-lg">in</a>
-                        <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl hover:scale-110 transition shadow-lg">w</a>
-                        <a href="https://instagram.com/yourfriendsid" target="_blank" class="w-14 h-14 bg-pink-600 text-white rounded-full flex items-center justify-center text-2xl hover:scale-110 transition shadow-lg">ig</a>
-                    </div>
-                    <p class="text-lg font-bold text-gray-800">Email: support@frienddomain.com</p>
+                <div class="mt-12 bg-blue-900 text-white p-6 rounded-2xl text-center">
+                    <p class="text-lg">অ্যাকাউন্ট খুলতে কোনো চার্জ নেই। আজই আপনার সঞ্চয় শুরু করুন!</p>
                 </div>
             </div>
         </div>
 
+        <div id="contact-page" class="page-section py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">আমাদের সাথে যুক্ত হোন</h2>
+                <p class="text-gray-600 mb-12">যেকোনো জিজ্ঞাসা বা সাহায্যের জন্য আমাদের সোশ্যাল মিডিয়ায় নক দিন।</p>
+                
+                <div class="flex justify-center gap-8 flex-wrap">
+                    <a href="https://facebook.com/yourfriendsid" class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-blue-700 transition transform hover:scale-110">f</a>
+                    <a href="https://wa.me/8801XXXXXXXXX" class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-green-600 transition transform hover:scale-110">w</a>
+                    <a href="https://linkedin.com/in/yourfriendsid" class="w-16 h-16 bg-blue-800 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-blue-900 transition transform hover:scale-110">in</a>
+                    <a href="https://instagram.com/yourfriendsid" class="w-16 h-16 bg-pink-600 text-white rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-pink-700 transition transform hover:scale-110">ig</a>
+                </div>
+                
+                <div class="mt-16 text-xl text-gray-700">
+                    <p>ইমেইল: <span class="font-bold text-blue-700">info@bracbank.com</span></p>
+                    <p>সদর দপ্তর: ১ গুলশান এভিনিউ, ঢাকা-১২১২</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-slate-900 text-gray-400 py-10 px-6 text-center border-t border-gray-800">
-        <p>&copy; ২০২৬ ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং। আপনার বন্ধু দ্বারা ডিজাইনকৃত।</p>
+    <footer class="bg-slate-900 text-gray-500 py-12 px-6 border-t border-gray-800 text-center">
+        <div class="container mx-auto">
+            <p class="mb-4">© ২০২৬ ব্র্যাক ব্যাংক এজেন্ট ব্যাংকিং। সকল অধিকার সংরক্ষিত।</p>
+            <p class="text-sm">Created with ❤️ for a digital future.</p>
+        </div>
     </footer>
 
     <script>
-        // Section Navigation
-        function showSection(sectionId) {
+        function showSection(id) {
             // Hide all sections
             document.querySelectorAll('.page-section').forEach(section => {
                 section.classList.remove('active-section');
             });
-            // Show the selected section
-            document.getElementById(sectionId).classList.add('active-section');
+            // Show target section
+            document.getElementById(id).classList.add('active-section');
             // Scroll to top
             window.scrollTo(0, 0);
         }
 
-        // Agent List Search Function
         function searchAgent() {
             let input = document.getElementById("agentSearch").value.toLowerCase();
             let table = document.getElementById("agentTable");
             let tr = table.getElementsByTagName("tr");
-
             for (let i = 1; i < tr.length; i++) {
-                let tdArea = tr[i].getElementsByTagName("td")[1];
-                let tdDistrict = tr[i].getElementsByTagName("td")[2];
-                if (tdArea || tdDistrict) {
-                    let textValue = (tdArea.textContent || tdArea.innerText) + (tdDistrict.textContent || tdDistrict.innerText);
-                    if (textValue.toLowerCase().indexOf(input) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
+                let rowText = tr[i].innerText.toLowerCase();
+                tr[i].style.display = rowText.includes(input) ? "" : "none";
             }
         }
     </script>
